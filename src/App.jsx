@@ -1,23 +1,16 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
-import './App.less';
-import Home from './pages/Home';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import "normalize.css";
+import Home from "./pages/Home";
+import Temp from "./components/Temp";
+
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <BrowserRouter>
+      <Home />
+      <Temp/>
+    </BrowserRouter>
   );
 }
 
