@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, Switch, Redirect } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import classnames from 'classnames';
 import logo from './MyLogo.jpg';
 import Login from '../../pages/Login';
@@ -39,7 +39,6 @@ export default function Layout() {
         {/* <Login className={classnames({ [loginStyle.loginForm]: true })} /> */}
         <Switch>
           <Route path="/login" component={Login} />
-          <Redirect path="/login" />
         </Switch>
         <Icons />
       </div>
