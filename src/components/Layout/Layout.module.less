@@ -1,0 +1,93 @@
+@width: 360px;
+@height: 40px;
+@color: rgba(24, 144, 255, 1);
+body {
+  background-image: linear-gradient(rgba(159, 190, 208, 0.5),rgba(223, 223, 223, 0.6)), url("./bc2.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: ease-in-out;
+
+}
+.login {
+  width: 1140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.mainTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logo {
+  width: 80px;
+  height: 80px;
+  padding-bottom: 10px;
+}
+.title {
+  font-size: 32px;
+  width: 295px;
+  height: 38px;
+  text-align:left;
+  padding-left: 10px;
+}
+
+.annotation {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  width: 455px;
+  height: 22px;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 39.5px;
+  text-align: center;
+}
+
+.loginSignUp {
+  width: @width;
+  height: @height;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight:400;
+  font-size: 20px;
+  line-height: 22px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.content {
+  margin-right: 16px;
+  color: @color;
+  font-size: 15px;
+  opacity: 0.6;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.content::after {
+  content: "";
+  width: 0px;
+  border-bottom: 3px solid rgba(24, 144, 255, 1);
+  margin: auto;
+  margin-top: 4px;
+  display: block;
+  transition: width 0.3s ease-in-out;
+}
+
+.contentActive,
+.content:hover {
+  opacity: 1;
+}
+
+.contentActive::after,
+.content:hover::after {
+  width: 32px;
+}
+
+.content:last-of-type {
+  padding-right: 0;
+}

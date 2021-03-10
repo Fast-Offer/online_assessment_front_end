@@ -3,15 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.5.0",
     "@craco/craco": "^5.9.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
     "antd": "^4.13.0",
+    "bootstrap": "^4.6.0",
+    "classnames": "^2.2.6",
     "craco-antd": "^1.19.0",
     "craco-less": "^1.17.1",
+    "craco-resolve-url-loader": "^1.0.0",
     "eslint-config-prettier": "^8.1.0",
     "normalize.css": "^8.0.1",
+    "pubsub-js": "^1.9.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
@@ -57,5 +62,6 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "pre-commit": "^1.2.2"
-  }
+  },
+  "homepage": "http://localhost:3000/login"
 }

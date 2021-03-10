@@ -1,15 +1,12 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
+import Layout from "./components/Layout";
 import "normalize.css";
-import Home from "./pages/Home";
-import Temp from "./components/Temp";
-
 
 function App() {
   return (
     <BrowserRouter>
-      <Home />
-      <Temp/>
+      <Layout />
     </BrowserRouter>
   );
 }
