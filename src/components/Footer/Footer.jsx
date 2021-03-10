@@ -1,7 +1,7 @@
-import React from "react";
-import { GithubOutlined } from "@ant-design/icons";
-import classnames from "classnames";
-import footerStyle from "./Footer.module.less";
+import React from 'react';
+import { GithubOutlined } from '@ant-design/icons';
+import classnames from 'classnames';
+import footerStyle from './Footer.module.less';
 
 export default function Footer() {
   return (
@@ -14,7 +14,7 @@ export default function Footer() {
       <div className={footerStyle.antd}>
         <span className={footerStyle.item}>Ant Design Pro</span>
         <span className={footerStyle.item}>
-          <GithubOutlined style={{ fontSize: "20px" }} />
+          <GithubOutlined style={{ fontSize: '20px' }} />
         </span>
         <span className={footerStyle.item}>Ant Design</span>
       </div>

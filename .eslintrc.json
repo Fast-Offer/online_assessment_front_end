@@ -4,11 +4,7 @@
     "es6": true,
     "jest": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb",
-    "prettier"
-  ],
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -17,6 +13,8 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
-  "rules": {"react/prefer-stateless-function": [0, { "ignorePureComponents": true }]},
+  "rules": {
+    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }]
+  },
   "root": true
 }

@@ -1,19 +1,19 @@
-import React from "react";
-import { Form, Input, Button, Checkbox } from "antd";
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
-import classnames from "classnames";
-import loginStyle from "./Login.module.less";
+import React from 'react';
+import { Form, Input, Button, Checkbox } from 'antd';
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import classnames from 'classnames';
+import loginStyle from './Login.module.less';
 
 export default function Login() {
   const onFinish = (values) => {
-    console.log("Received values of form: ", values);
+    console.log('Received values of form: ', values);
   };
   return (
     <div>
       <Form
         name="normal_login"
         className={classnames({
-          "login-form": true,
+          'login-form': true,
           // [loginStyle.loginForm]: true,
         })}
         initialValues={{
@@ -27,7 +27,7 @@ export default function Login() {
           rules={[
             {
               required: true,
-              message: "Please input your Username!",
+              message: 'Please input your Username!',
             },
           ]}
         >
@@ -42,7 +42,7 @@ export default function Login() {
           rules={[
             {
               required: true,
-              message: "Please input your Password!",
+              message: 'Please input your Password!',
             },
           ]}
         >
@@ -58,7 +58,7 @@ export default function Login() {
           </Form.Item>
           <a
             className={classnames({
-              "login-form-forgot": true,
+              'login-form-forgot': true,
               [`${loginStyle.forgot}`]: true,
             })}
             href="/"
@@ -72,7 +72,7 @@ export default function Login() {
             type="primary"
             htmlType="submit"
             className={classnames({
-              "login-form-button": true,
+              'login-form-button': true,
               [`${loginStyle.signIn}`]: true,
             })}
           >

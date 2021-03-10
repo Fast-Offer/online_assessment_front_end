@@ -1,6 +1,6 @@
 /* craco.config.js */
-const CracoAntDesignPlugin = require("craco-antd");
-const CracoLessPlugin = require("craco-less");
+const CracoAntDesignPlugin = require('craco-antd');
+const CracoLessPlugin = require('craco-less');
 
 module.exports = {
   plugins: [
@@ -17,7 +17,7 @@ module.exports = {
         },
         cssLoaderOptions: {
           modules: {
-            localIdentName: "[local]--[hash:base64:5]",
+            localIdentName: '[local]--[hash:base64:5]',
           },
         },
         lessLoaderOptions: {

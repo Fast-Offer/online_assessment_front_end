@@ -1,7 +1,7 @@
-import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import Layout from "./components/Layout";
-import "normalize.css";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Layout from './components/Layout';
+import 'normalize.css';
 
 function App() {
   return (
