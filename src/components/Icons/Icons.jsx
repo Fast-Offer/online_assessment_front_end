@@ -7,6 +7,7 @@ import {
 import iconStyles from './Icons.module.less';
 
 export default function Icons() {
+  /* eslint-disable */
   return (
     <div className={iconStyles.quickSignIn}>
       <div className={iconStyles.quickSignInText}>Quick Sign-in:</div>

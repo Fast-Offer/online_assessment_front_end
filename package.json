@@ -26,14 +26,13 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "CI=true craco test --config jest.config.js",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src/components/** ./src/pages/** -c .eslintrc.json --ext js,jsx",
     "lint-fix": "eslint ./src/components/** ./src/pages/** -c .eslintrc.json --fix --ext js,jsx"
   },
   "pre-commit": [
-    "lint",
-    "test"
+    "lint"
   ],
   "eslintConfig": {
     "extends": [

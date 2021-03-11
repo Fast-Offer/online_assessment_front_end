@@ -22,18 +22,18 @@ export default function Login() {
         onFinish={onFinish}
       >
         <Form.Item
-          className={loginStyle.username}
-          name="username"
+          className={loginStyle.email}
+          name="email"
           rules={[
             {
               required: true,
-              message: 'Please input your Username!',
+              message: 'Please input your Email!',
             },
           ]}
         >
           <Input
             prefix={<UserOutlined className="site-form-item-icon" />}
-            placeholder="Username"
+            placeholder="Email"
           />
         </Form.Item>
         <Form.Item

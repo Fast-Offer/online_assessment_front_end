@@ -3,10 +3,9 @@ import { Link, Route, Switch } from 'react-router-dom';
 import classnames from 'classnames';
 import logo from './MyLogo.jpg';
 import Login from '../../pages/Login';
-import Icons from '../Icons/Icons';
-import Footer from '../Footer/Footer';
+import Icons from '../Icons';
+import Footer from '../Footer';
 import loginStyle from './Layout.module.less';
-// import Icons from "./Icons";
 
 export default function Layout() {
   return (
@@ -23,8 +22,7 @@ export default function Layout() {
         </div>
 
         <div className={loginStyle.annotation}>
-          Ant Design is the most influential web design specification in Xihu
-          district
+          Online Assessment-Powerful Self-Examination System in AU
         </div>
         <div className={loginStyle.loginSignUp}>
           <Link
@@ -34,16 +32,13 @@ export default function Layout() {
           >
             Login
           </Link>
-         
         </div>
-        {/* <Login className={classnames({ [loginStyle.loginForm]: true })} /> */}
         <Switch>
           <Route path="/login" component={Login} />
         </Switch>
         <Icons />
+        <Footer />
       </div>
-
-      <Footer />
     </>
   );
 }

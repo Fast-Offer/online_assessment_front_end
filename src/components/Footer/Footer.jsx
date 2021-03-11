@@ -7,7 +7,6 @@ export default function Footer() {
   return (
     <footer
       className={classnames({
-        container: true,
         [footerStyle.footer]: true,
       })}
     >
@@ -19,7 +18,7 @@ export default function Footer() {
         <span className={footerStyle.item}>Ant Design</span>
       </div>
       <div className={footerStyle.copyright}>
-        Copyright ©2020 Produced by Ant Finance Experience Technology Department
+        Copyright ©2021 Produced by Fast Offer Technology Department
       </div>
     </footer>
   );
