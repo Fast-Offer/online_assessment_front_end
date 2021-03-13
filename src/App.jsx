@@ -1,23 +1,13 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
-import './App.less';
-import Home from './pages/Home';
+import { BrowserRouter } from 'react-router-dom';
+import Layout from './components/Layout';
+import 'normalize.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
   );
 }
 
