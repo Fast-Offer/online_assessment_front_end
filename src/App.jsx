@@ -1,22 +1,20 @@
 import React from 'react';
+import './App.module.less';
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
+  Switch,
 } from 'react-router-dom';
-import './App.less';
-import Home from './pages/Home';
+import Register from './pages/Register/Register';
+import Login from './pages/Login/Login';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route path="/register" component={Register} />
+        <Route path="/login" component={Login} />
+      </Switch>
     </Router>
   );
 }
