@@ -4,6 +4,7 @@ import {
   LinkedinOutlined,
   WechatOutlined,
 } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 import iconStyles from './Icons.module.less';
 
 export default function Icons() {
@@ -26,9 +27,9 @@ export default function Icons() {
         />
       </div>
       <div>
-        <a className={iconStyles.signUp} href="signup">
-          Sign Up
-        </a>
+        <Link className={iconStyles.signUp} to="/register">
+          Register
+        </Link>
       </div>
     </div>
   );

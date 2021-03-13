@@ -6,6 +6,7 @@ import loginStyle from './Login.module.less';
 
 export default function Login() {
   const onFinish = (values) => {
+    // eslint-disable-next-line
     console.log('Received values of form: ', values);
   };
   return (
@@ -61,7 +62,8 @@ export default function Login() {
               'login-form-forgot': true,
               [`${loginStyle.forgot}`]: true,
             })}
-            href="/"
+            href="/login"
+            disabled="disabled"
           >
             Forgot your password?
           </a>

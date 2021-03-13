@@ -1,13 +1,21 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import Layout from './components/Layout';
-import 'normalize.css';
+import './App.module.less';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import Register from './pages/Register/Register';
+import Layout from './components/Layout/Layout';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Layout />
-    </BrowserRouter>
+    <Router>
+      <Switch>
+        <Route path="/register" component={Register} />
+        <Layout />
+      </Switch>
+    </Router>
   );
 }
 

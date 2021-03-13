@@ -1,25 +1,20 @@
 import React from 'react';
-import { GithubOutlined } from '@ant-design/icons';
-import classnames from 'classnames';
-import footerStyle from './Footer.module.less';
+import { QuestionCircleOutlined } from '@ant-design/icons';
+import { Row, Col } from 'antd';
+import styles from './Footer.module.less';
 
-export default function Footer() {
-  return (
-    <footer
-      className={classnames({
-        [footerStyle.footer]: true,
-      })}
-    >
-      <div className={footerStyle.antd}>
-        <span className={footerStyle.item}>Ant Design Pro</span>
-        <span className={footerStyle.item}>
-          <GithubOutlined style={{ fontSize: '20px' }} />
-        </span>
-        <span className={footerStyle.item}>Ant Design</span>
-      </div>
-      <div className={footerStyle.copyright}>
-        Copyright ©2021 Produced by Fast Offer Technology Department
-      </div>
-    </footer>
-  );
-}
+const Footer = () => (
+  <div className={styles.footer}>
+    <Row>
+      <Col span={8}> </Col>
+      <Col span={8}>
+        <p>Copyright ©2021 Fast Offer Team</p>
+      </Col>
+      <Col span={8} style={{ textAlign: 'right' }}>
+        <QuestionCircleOutlined className={styles.questionMark} />
+      </Col>
+    </Row>
+  </div>
+);
+
+export default Footer;
