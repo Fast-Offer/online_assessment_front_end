@@ -1,23 +1,31 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Work step
+
 1. Download the repo
+
 ```bash
 git clone https://github.com/Fast-Offer/online_assessment_front_end.git
 cd online_assessment_front_end
 npm install
 ```
+
 2. Set up your branch
+
 ```bash
 git checkout -b feature_your_jira_ticket_num
 ```
+
 3. When you finshin your work, commit you code, and push
+
 ```bash
 git add .
 git commit -S -m "xxx"
 git push -u origin feature_your_jira_ticket_num
 ```
+
 4. you also can use git-cz to help commit
+
 ```bash
 npm install git-cz
 git add .
@@ -25,36 +33,40 @@ npx git-cz -S
 git push -u origin feature_xxx
 ```
 
-*Notice: If your code can not pass the eslint test, your code can not be commited
-because of git hook*
+_Notice: If your code can not pass the eslint test, your code can not be commited
+because of git hook_
 
 5. The request a pull request in github, after the peer review, merge it
-and delete the feature_xxx branch
+   and delete the feature_xxx branch
 
-*Notice: If your your did not do a signed commit, your pr could not be merged
-
-
+\*Notice: If your your did not do a signed commit, your pr could not be merged
 
 ## Run the front_end
 
-- Run the app	
+- Run the app
+
 ```bash
 npm run start
 ```
+
 - Run eslint help you check your code
+
 ```bash
 npm run lint
 ```
 
 - Use eslint auto fix
+
 ```bash
 npm run lint-fix
-``` 
+```
 
 - Show unit test coverage
+
 ```bash
 npm run test -- --coverage
 ```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,5 +1,5 @@
 import React from 'react';
-// import { QuestionCircleOutlined } from '@ant-design/icons';
+import { QuestionCircleOutlined } from '@ant-design/icons';
 import { Row, Col } from 'antd';
 import styles from './Footer.module.less';
 
@@ -11,7 +11,7 @@ const Footer = () => (
         <p>Copyright ©2021 Fast Offer Team</p>
       </Col>
       <Col span={8} style={{ textAlign: 'right' }}>
-        {/* <QuestionCircleOutlined className={styles.questionMark} /> */}
+        <QuestionCircleOutlined className={styles.questionMark} />
       </Col>
     </Row>
   </div>

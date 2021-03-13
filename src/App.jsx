@@ -6,14 +6,14 @@ import {
   Switch,
 } from 'react-router-dom';
 import Register from './pages/Register/Register';
-import Login from './pages/Login/Login';
+import Layout from './components/Layout/Layout';
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route path="/register" component={Register} />
-        <Route path="/login" component={Login} />
+        <Layout />
       </Switch>
     </Router>
   );

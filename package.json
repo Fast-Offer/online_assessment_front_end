@@ -11,9 +11,14 @@
     "antd": "^4.13.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "formik": "^2.2.6",
+    "classnames": "^2.2.6",
     "craco-antd": "^1.19.0",
     "craco-less": "^1.17.1",
-    "formik": "^2.2.6",
+    "craco-resolve-url-loader": "^1.0.0",
+    "eslint-config-prettier": "^8.1.0",
+    "normalize.css": "^8.0.1",
+    "pubsub-js": "^1.9.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
@@ -23,7 +28,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "CI=true craco test --config jest.config.js",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src/components/** ./src/pages/** -c .eslintrc.json --ext js,jsx",
     "lint-fix": "eslint ./src/components/** ./src/pages/** -c .eslintrc.json --fix --ext js,jsx"
@@ -58,5 +63,6 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "pre-commit": "^1.2.2"
-  }
+  },
+  "homepage": "http://localhost:3000/login"
 }
