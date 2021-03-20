@@ -10,8 +10,12 @@ const AppRoutes = () => (
     <AuthenticatedRoutes path="/dashboard">
       <div>dashboard</div>
     </AuthenticatedRoutes>
-    <AuthenticatedRoutes path="/redo" component={Redo} />
-    <AuthenticatedRoutes path="/fav" component={Fav} />
+    <AuthenticatedRoutes path="/redo">
+      <Redo />
+    </AuthenticatedRoutes>
+    <AuthenticatedRoutes path="/fav">
+      <Fav />
+    </AuthenticatedRoutes>
     <UnauthenticatedRoutes />
   </Switch>
 );

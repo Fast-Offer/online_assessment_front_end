@@ -24,9 +24,7 @@ const AuthProvider = ({ children }) => {
         
     }
 
-    const isAuthenticated = () => (
-        authState === 'true'
-    )
+    const isAuthenticated = () => authState === true;
 
     return (
         <Provider value={{
@@ -40,4 +38,4 @@ const AuthProvider = ({ children }) => {
     )
 }
 
-export {AuthContext, AuthProvider};
+export { AuthContext, AuthProvider}
