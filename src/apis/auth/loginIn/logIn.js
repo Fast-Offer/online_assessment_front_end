@@ -5,7 +5,7 @@ const headers = {
 };
 
 const logIn = (data) => axios
-  .post('/loging', data, headers)
+  .post('/login', data, headers)
   .catch((error) => { throw error.response; });
 
 export default logIn;
