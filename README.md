@@ -4,25 +4,58 @@
 
 ```bash
 git clone https://github.com/Fast-Offer/online_assessment_front_end.git
-cd online_assessment_front_end
+```
+
+2. Install modules
+
+```bash
 npm install
 ```
 
-2. Set up your branch
+3. Work on your own branch
+
+```bash
+// Create your own branch.
+git branch feature_your_jira_ticket_num
+```
+
+4. Always checkout to your own branch before commit
 
 ```bash
 git checkout -b feature_your_jira_ticket_num
 ```
 
-3. When you finshin your work, commit you code, and push
+5. Feel free to commit ( You can alway commit when you think it's time to save a version. )
 
 ```bash
+// Add all your files to staging status.
 git add .
+// -S is optional.
 git commit -S -m "xxx"
-git push -u origin feature_your_jira_ticket_num
 ```
 
-4. you also can use git-cz to help commit
+6. Awalys fetch from orgin dev before your final commit of your own feature branch
+
+```bash
+// First, go to your local dev branch.
+git checkout dev
+// Second, get the latest version code from origin dev.
+git fetch origin dev
+// Then, merge origin dev to your local dev. Now it's time to resolve conflicts if needed.
+git merge origin/dev
+```
+
+7. After the conflicts have been resolved, it's time to push!
+
+```bash
+// Don't forget to go back to your own branch before pushing.
+git checkout feature_your_jira_ticket_num
+git push https://github.com/Fast-Offer/online_assessment_front_end.git
+```
+
+_Notice: After push, go to github to create pull request and don't forget to request code review.
+
+8. Alternatively, you also can use git-cz to help commit
 
 ```bash
 npm install git-cz
@@ -34,10 +67,8 @@ git push -u origin feature_xxx
 _Notice: If your code can not pass the eslint test, your code can not be commited
 because of git hook_
 
-5. The request a pull request in github, after the peer review, merge it
+9. The request a pull request in github, after the peer review, merge it
    and delete the feature_xxx branch
-
-\*Notice: If your your did not do a signed commit, your pr could not be merged
 
 ## Run the front_end
 
