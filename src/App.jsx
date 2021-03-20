@@ -2,21 +2,17 @@ import React from 'react';
 import './App.module.less';
 import {
   BrowserRouter as Router,
-  Route,
-  Switch,
 } from 'react-router-dom';
-import Register from './pages/Register/Register';
-import Layout from './components/Layout/Layout';
+import AppRoutes from './router/AppRoutes';
+import { AuthProvider } from './context/AuthContext';
 
-function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route path="/register" component={Register} />
-        <Layout />
-      </Switch>
-    </Router>
-  );
-}
-
+const App = () => (
+  <Router>
+    <AuthProvider>
+      <div className="APP">
+        <AppRoutes />
+      </div>
+    </AuthProvider>
+  </Router>
+);
 export default App;
