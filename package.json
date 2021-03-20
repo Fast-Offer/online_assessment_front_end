@@ -11,12 +11,12 @@
     "antd": "^4.13.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
-    "formik": "^2.2.6",
     "classnames": "^2.2.6",
     "craco-antd": "^1.19.0",
     "craco-less": "^1.17.1",
     "craco-resolve-url-loader": "^1.0.0",
     "eslint-config-prettier": "^8.1.0",
+    "formik": "^2.2.6",
     "normalize.css": "^8.0.1",
     "pubsub-js": "^1.9.3",
     "react": "^17.0.1",
@@ -30,8 +30,8 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "lint": "eslint ./src/components/** ./src/pages/** -c .eslintrc.json --ext js,jsx",
-    "lint-fix": "eslint ./src/components/** ./src/pages/** -c .eslintrc.json --fix --ext js,jsx"
+    "lint": "eslint ./src/components/** ./src/pages/** ./src/apis/** ./src/router/** ./src/libs -c .eslintrc.json --ext js,jsx",
+    "lint-fix": "eslint ./src/components/** ./src/pages/** ./src/apis/** ./src/router/** ./src/libs -c .eslintrc.json --fix --ext js,jsx"
   },
   "pre-commit": [
     "lint"
@@ -64,5 +64,5 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "pre-commit": "^1.2.2"
   },
-  "homepage": "http://localhost:3000/login"
+  "proxy": "http://localhost:8001"
 }

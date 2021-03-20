@@ -2,25 +2,17 @@ import React from 'react';
 import './App.module.less';
 import {
   BrowserRouter as Router,
-  Route,
-  Switch,
 } from 'react-router-dom';
-import Register from './pages/Register/Register';
-import Redo from './pages/Redo/Redo';
-import Fav from './pages/Fav/Fav';
-import Login from './pages/Login/Login';
+import AppRoutes from './router/AppRoutes';
+import { AuthProvider } from './context/AuthContext';
 
-function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route path="/register" component={Register} />
-        <Route path="/login" component={Login} />
-        <Route path="/redo" component={Redo} />
-        <Route path="/Fav" component={Fav} />
-      </Switch>
-    </Router>
-  );
-}
-
+const App = () => (
+  <Router>
+    <AuthProvider>
+      <div className="APP">
+        <AppRoutes />
+      </div>
+    </AuthProvider>
+  </Router>
+);
 export default App;

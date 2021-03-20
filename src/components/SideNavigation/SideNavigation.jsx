@@ -1,6 +1,8 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
-import { UserOutlined, AppstoreAddOutlined, HeartOutlined, BarChartOutlined, HistoryOutlined } from '@ant-design/icons';
+import {
+  UserOutlined, AppstoreAddOutlined, HeartOutlined, BarChartOutlined, HistoryOutlined,
+} from '@ant-design/icons';
 import { NavLink } from 'react-router-dom';
 
 const { Sider } = Layout;
@@ -16,10 +18,10 @@ const SideNavigation = () => (
         Library
       </Menu.Item>
       <Menu.Item key="redo" icon={<HistoryOutlined />}>
-        <NavLink to='./redo'>Redo Quizs</NavLink>
+        <NavLink to="./redo">Redo Quizs</NavLink>
       </Menu.Item>
       <Menu.Item key="fav" icon={<HeartOutlined />}>
-        <NavLink to='./fav'>Fav Quizs</NavLink>
+        <NavLink to="./fav">Fav Quizs</NavLink>
       </Menu.Item>
       <Menu.Item key="result" icon={<BarChartOutlined />}>
         My Result

@@ -5,7 +5,6 @@ import Title from './component/Title/Title';
 import Form from './component/Form/Form';
 import Footer from '../../components/Footer/Footer';
 
-
 const Register = () => (
   <div>
     <Header />

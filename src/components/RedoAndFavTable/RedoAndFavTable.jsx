@@ -1,5 +1,7 @@
 import React from 'react';
-import { Layout, Table, Space, Button } from 'antd';
+import {
+  Layout, Table, Space, Button,
+} from 'antd';
 import data from './fakeData';
 import showDeleteConfirm from '../showDeleteConfirm/showDeleteConfirm';
 
@@ -27,20 +29,32 @@ const RedoAndFavTable = () => (
         // Renderer of the table cell. function(text, record, index) {}
         render={(record) => (
           <Space size="middle">
-            <Button type="link" onClick={() => {
-              // ***********************************************************
-              // NOTE: You need modify code in this block
-              // ***********************************************************
-              // eslint-disable-next-line
+            <Button
+              type="link"
+              onClick={() => {
+                // ***********************************************************
+                // NOTE: You need modify code in this block
+                // ***********************************************************
+                // eslint-disable-next-line
               console.log(record.quizId);
-            }}>Edit</Button>
-            <Button type="link" danger onClick={() => {
-              // ***********************************************************
-              // NOTE: You need add code in this block
-              // ***********************************************************
-              // Modal will show up and the quizId will be transferred to [ showDeleteConfirm component ]
-              showDeleteConfirm(record.quizId);
-            }}>Delete</Button>
+              }}
+            >
+              Edit
+            </Button>
+            <Button
+              type="link"
+              danger
+              onClick={() => {
+                // ***********************************************************
+                // NOTE: You need add code in this block
+                // ***********************************************************
+                // Modal will show up and the quizId will be transferred to
+                // [ showDeleteConfirm component ]
+                showDeleteConfirm(record.quizId);
+              }}
+            >
+              Delete
+            </Button>
           </Space>
         )}
       />

@@ -3,12 +3,12 @@ import { Input } from 'antd';
 
 const { Search } = Input;
 
-const onSearch = value => {
+const onSearch = (value) => {
   if (value) {
     // eslint-disable-next-line
     console.log(value);
   }
-}
+};
 
 const SearchBar = () => (
   <Search

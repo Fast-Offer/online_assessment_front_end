@@ -1,5 +1,7 @@
 import React from 'react';
-import { Form, Input, Button, Checkbox } from 'antd';
+import {
+  Form, Input, Button, Checkbox,
+} from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
@@ -8,7 +10,6 @@ import Icons from './Icons/Icons';
 import Footer from '../../components/Footer/Footer';
 import LoginAndRegisterHeader from '../../components/LoginAndRegisterHeader/LoginAndRegisterHeader';
 
-
 export default function Login() {
   const onFinish = (values) => {
     // eslint-disable-next-line
@@ -16,11 +17,11 @@ export default function Login() {
   };
   return (
     <div
-        className={classnames({
-          container: true,
-          [loginStyle.login]: true,
-        })}
-      >
+      className={classnames({
+        container: true,
+        [loginStyle.login]: true,
+      })}
+    >
       <LoginAndRegisterHeader />
       <div className={loginStyle.mainTitle}>
         {/* <img src={logo} alt="logo" className={loginStyle.logo} /> */}
@@ -29,7 +30,7 @@ export default function Login() {
 
       <div className={loginStyle.annotation}>
         Online Assessment-Powerful Self-Examination System in AU
-        </div>
+      </div>
       <div className={loginStyle.loginSignUp}>
         <Link
           to="/login"
@@ -102,7 +103,7 @@ export default function Login() {
               disabled="disabled"
             >
               Forgot your password?
-          </a>
+            </a>
           </Form.Item>
           <Form.Item>
             <Button
@@ -114,7 +115,7 @@ export default function Login() {
               })}
             >
               Sign in
-          </Button>
+            </Button>
           </Form.Item>
         </Form>
       </div>
