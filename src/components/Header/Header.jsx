@@ -1,17 +1,27 @@
 import React from 'react';
-import { Layout, Menu } from 'antd';
-import './Header.module.less';
+import {
+  Layout,
+  Avatar,
+  Row,
+  Col,
+} from 'antd';
+import style from './Header.module.less';
 
 const { Header } = Layout;
 
 const MainHeader = () => (
   <Header className="header">
-    <div className="logo" />
-    <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-      <Menu.Item key="1">nav 1</Menu.Item>
-      <Menu.Item key="2">nav 2</Menu.Item>
-      <Menu.Item key="3">nav 3</Menu.Item>
-    </Menu>
+    <Row>
+      <Col span={8}>
+        <div className="logo" />
+        <span className={style.titleOnHeader}>Online Assessment</span>
+      </Col>
+      <Col span={8}> </Col>
+      <Col span={8} className={style.rightElements}>
+        <Avatar className={style.avatar}>SM</Avatar>
+        <span className={style.userNameOnHeader}>Serati Ma</span>
+      </Col>
+    </Row>
   </Header>
 );
 
