@@ -3,13 +3,13 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Card } from 'antd';
 
-// import contentStyle from './CardDisplay.module.less';
+import contentStyle from './CardDisplay.module.less';
 
 class Cards extends React.Component {
   render() {
     const { Meta } = Card;
     return (
-      <div>
+      <div className={contentStyle.card}>
         <Card
           hoverable
           cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}

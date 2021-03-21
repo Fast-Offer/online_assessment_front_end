@@ -8,15 +8,17 @@ import Cards from './Card';
 class Content extends React.Component {
   render() {
     return (
-      <div className={contentStyle.container}>
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
+      <div className={contentStyle.background_container}>
+        <div className={contentStyle.container}>
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+        </div>
       </div>
     );
   }
