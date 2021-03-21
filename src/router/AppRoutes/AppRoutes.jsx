@@ -4,11 +4,12 @@ import AuthenticatedRoutes from './components/AuthenticatedRoutes';
 import UnauthenticatedRoutes from './components/UnauthenticatedRoutes';
 import Redo from '../../pages/Redo';
 import Fav from '../../pages/Fav';
+import Lib from '../../pages/Library';
 
 const AppRoutes = () => (
   <Switch>
     <AuthenticatedRoutes path="/dashboard">
-      <div>dashboard</div>
+      <Lib />
     </AuthenticatedRoutes>
     <AuthenticatedRoutes path="/redo">
       <Redo />

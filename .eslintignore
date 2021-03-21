@@ -7,3 +7,7 @@ coverage
 craco.config.js
 jest.config.js
 
+*.less
+*.png
+*.jpg
+
