@@ -21,7 +21,7 @@ const validateMessages = {
 /* eslint-enable no-template-curly-in-string */
 
 const AccountDetails = () => {
-  const onFinish = (values: any) => {
+  const onFinish = (values) => {
     // eslint-disable-next-line
     console.log(values);
   };
