@@ -4,6 +4,7 @@ import AuthenticatedRoutes from './components/AuthenticatedRoutes';
 import UnauthenticatedRoutes from './components/UnauthenticatedRoutes';
 import Redo from '../../pages/Redo';
 import Fav from '../../pages/Fav';
+import Account from '../../pages/Account';
 
 const AppRoutes = () => (
   <Switch>
@@ -15,6 +16,9 @@ const AppRoutes = () => (
     </AuthenticatedRoutes>
     <AuthenticatedRoutes path="/fav">
       <Fav />
+    </AuthenticatedRoutes>
+    <AuthenticatedRoutes path="/account">
+      <Account />
     </AuthenticatedRoutes>
     <UnauthenticatedRoutes />
   </Switch>
