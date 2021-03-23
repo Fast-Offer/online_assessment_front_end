@@ -15,7 +15,7 @@ const SideNavigation = () => (
       style={{ height: '100%', borderRight: 0 }}
     >
       <Menu.Item key="library" icon={<AppstoreAddOutlined />}>
-        Library
+        <NavLink to="./dashboard">Library</NavLink>
       </Menu.Item>
       <Menu.Item key="redo" icon={<HistoryOutlined />}>
         <NavLink to="./redo">Redo Quizs</NavLink>
