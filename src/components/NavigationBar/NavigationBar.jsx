@@ -6,17 +6,6 @@ import { Menu } from 'antd';
 import NavigationBarStyle from './NavigationBarStyle.module.less';
 
 class NavigationBar extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     current: 'mail',
-  //   };
-  // }
-
-  // handleClick = (e) => {
-  //   console.log('click ', e);
-  //   this.setState({ current: e.key });
-  // };
 
   render() {
     return (
