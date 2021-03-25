@@ -1,17 +1,11 @@
 import React from 'react';
 import { Layout, Breadcrumb } from 'antd';
-// import Header from '../../components/Header'
 import SideNavigation from '../../components/SideNavigation';
 import MainHeader from '../../components/Header/Header';
-// import SideNavigation from '../../components/SideNavigation/SideNavigation';
 import AccountDetails from '../../components/AccountDetails';
 
 export default function Account() {
   return (
-    // <>
-    // <Header/>
-    // <SideNavigation/>
-    // </>
     <Layout style={{ height: '100vh' }}>
       <MainHeader />
       <Layout>
