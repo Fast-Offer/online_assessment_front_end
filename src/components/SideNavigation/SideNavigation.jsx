@@ -1,7 +1,11 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
 import {
-  UserOutlined, AppstoreAddOutlined, HeartOutlined, BarChartOutlined, HistoryOutlined,
+  UserOutlined,
+  AppstoreAddOutlined,
+  HeartOutlined,
+  BarChartOutlined,
+  HistoryOutlined,
 } from '@ant-design/icons';
 import { NavLink } from 'react-router-dom';
 
@@ -15,7 +19,7 @@ const SideNavigation = () => (
       style={{ height: '100%', borderRight: 0 }}
     >
       <Menu.Item key="library" icon={<AppstoreAddOutlined />}>
-        <NavLink to="./dashboard">Library</NavLink>
+        <NavLink to="./lib">Library</NavLink>
       </Menu.Item>
       <Menu.Item key="redo" icon={<HistoryOutlined />}>
         <NavLink to="./redo">Redo Quizs</NavLink>
@@ -27,7 +31,7 @@ const SideNavigation = () => (
         My Result
       </Menu.Item>
       <Menu.Item key="account" icon={<UserOutlined />}>
-        Account
+        <NavLink to="./account">Account</NavLink>
       </Menu.Item>
     </Menu>
   </Sider>

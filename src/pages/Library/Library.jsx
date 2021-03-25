@@ -4,7 +4,7 @@ import 'antd/dist/antd.css';
 import { Breadcrumb } from 'antd';
 
 import Layout from 'antd/lib/layout/layout';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import SearchBarNav from '../../components/SearchBarNav/SearchBarNav';
 import CardsDisplay from '../../components/CardDisplay/CardDisplay';
 import NavigationBar from '../../components/NavigationBar/NavigationBar';
 import Header from '../../components/Header/Header';
@@ -25,7 +25,7 @@ class LibraryLayout extends React.Component {
             <Breadcrumb style= {{ padding: '0 24px'}}>
               <Breadcrumb.Item>Library</Breadcrumb.Item>
             </Breadcrumb>
-            <SearchBar />
+            <SearchBarNav />
             <NavigationBar />
             <CardsDisplay />
           </Layout>

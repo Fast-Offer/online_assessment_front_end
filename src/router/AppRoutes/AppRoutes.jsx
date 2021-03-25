@@ -5,10 +5,11 @@ import UnauthenticatedRoutes from './components/UnauthenticatedRoutes';
 import Redo from '../../pages/Redo';
 import Fav from '../../pages/Fav';
 import Lib from '../../pages/Library';
+import Account from '../../pages/Account';
 
 const AppRoutes = () => (
   <Switch>
-    <AuthenticatedRoutes path="/dashboard">
+    <AuthenticatedRoutes path="/lib">
       <Lib />
     </AuthenticatedRoutes>
     <AuthenticatedRoutes path="/redo">
@@ -16,6 +17,9 @@ const AppRoutes = () => (
     </AuthenticatedRoutes>
     <AuthenticatedRoutes path="/fav">
       <Fav />
+    </AuthenticatedRoutes>
+    <AuthenticatedRoutes path="/account">
+      <Account />
     </AuthenticatedRoutes>
     <UnauthenticatedRoutes />
   </Switch>
