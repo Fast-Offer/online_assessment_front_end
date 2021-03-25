@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { AuthContext} from '../../../../context/AuthContext';
+import { AuthContext } from '../../../../context/AuthContext';
 
 const AuthenticatedRoutes = ({
   children, path,exact
@@ -8,11 +8,11 @@ const AuthenticatedRoutes = ({
   const authContext = useContext(AuthContext);
 
   return (
-      <Route
-        path={path}
-        exact={exact}
-        render={() => (authContext.isAuthenticated() ? <>{children}</> : <Redirect to="/login" />)}
-     />
+    <Route
+      path={path}
+      exact={exact}
+      render={() => (authContext.isAuthenticated() ? <>{children}</> : <Redirect to="/login" />)}
+   />
   );
 };
 
