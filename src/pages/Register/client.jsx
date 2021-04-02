@@ -2,16 +2,25 @@ import openNotification from '../../components/Notification/Notification';
 
 const axios = require('axios');
 
-// ***********************************************************
-// NOTE: You need modify this requestUrl
-// ***********************************************************
-const requestUrl = 'this/is/NOT/a/valid/url';
+const requestUrl = '/signup';
 
 const addNewUser = (newUser) => {
   axios.post(requestUrl, newUser)
     .then((response) => {
-      // eslint-disable-next-line
-      console.log(response);
+      const resStatus = response.data.status;
+      const errorMessage = response.data.msg;
+      const successMessage = 'Register successfully! Page will jump to login automatically...';
+
+      if (resStatus !== 200) {
+        openNotification('error', resStatus, errorMessage);
+      }
+      
+      if (resStatus === 200) {
+        openNotification('success', resStatus, successMessage);
+        setTimeout(() => {
+          window.location.href = "/login";
+        }, 2000);
+      }
     })
     .catch((error) => {
       if (error.response) {
@@ -24,12 +33,12 @@ const addNewUser = (newUser) => {
         // (2) After errorType & errorMessage != null or undefined,
         // the notification will behave normally again...
         // ***********************************************************
-        const errorType = error.response.data.httpStatus;
-        const errorMessage = error.response.data.message;
+        const errorType = error.response.data.status;
+        const errorMessage = error.response.data.error;
         // Invoke Notification
         openNotification('error', errorType, errorMessage);
       }
     });
-};
+}
 
 export default addNewUser;
