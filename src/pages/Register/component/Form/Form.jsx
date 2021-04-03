@@ -8,7 +8,7 @@ import {
   Tag,
 } from 'antd';
 import { Link } from 'react-router-dom';
-import styles from './Form.module.less';
+// import styles from './Form.module.less';
 import addNewUser from '../../client';
 
 const Form = () => (
@@ -33,12 +33,7 @@ const Form = () => (
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
-        addNewUser();
-        // ***********************************************************
-        // NOTE: You need delete the console.log() after finish the job...
-        // ***********************************************************
-        // eslint-disable-next-line
-        console.log(values);
+        addNewUser(values)
         setSubmitting(false);
       }}
     >
@@ -55,7 +50,8 @@ const Form = () => (
       }) => (
         <form onSubmit={handleSubmit}>
           <Input
-            className={styles.input}
+            // className={styles.input}
+            style={{marginTop: '10px', marginBottom: '10px'}}
             type="email"
             name="email"
             placeholder="Email"
@@ -67,7 +63,8 @@ const Form = () => (
             {errors.email && touched.email && <Tag color="error">{errors.email}</Tag>}
           </div>
           <Input
-            className={styles.input}
+            // className={styles.input}
+            style={{ marginTop: '10px', marginBottom: '10px' }}
             type="password"
             name="password"
             placeholder="Password (6 digits at least &amp; case sensitive"
@@ -79,7 +76,8 @@ const Form = () => (
             {errors.password && touched.password && <Tag color="error">{errors.password}</Tag>}
           </div>
           <Input
-            className={styles.input}
+            // className={styles.input}
+            style={{ marginTop: '10px', marginBottom: '10px' }}
             type="password"
             name="comfirmPassword"
             placeholder="Comfirm password"
@@ -95,7 +93,9 @@ const Form = () => (
               <Col span={8} style={{ textAlign: 'left' }}>
                 <Button
                   type="primary"
-                  onClick={() => submitForm()}
+                  onClick={() => {
+                    submitForm()
+                  }}
                   disabled={isSubmitting}
                   style={{ width: '80%' }}
                 >
@@ -106,7 +106,7 @@ const Form = () => (
                 <Link
                   to="/login"
                 >
-                  existing account
+                  Existing Account
                 </Link>
               </Col>
             </Row>

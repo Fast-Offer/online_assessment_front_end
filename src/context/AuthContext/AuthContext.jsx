@@ -21,7 +21,6 @@ const AuthProvider = ({ children }) => {
         localStorage.removeItem('isAuth');
         setAuthState('false');
         history.push('/login');
-        
     }
 
     const isAuthenticated = () => authState === true;
@@ -38,4 +37,4 @@ const AuthProvider = ({ children }) => {
     )
 }
 
-export { AuthContext, AuthProvider}
+export { AuthContext, AuthProvider }

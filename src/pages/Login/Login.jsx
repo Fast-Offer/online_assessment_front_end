@@ -4,17 +4,55 @@ import {
 } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import classnames from 'classnames';
-import { Link } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import loginStyle from './Login.module.less';
 import Icons from './Icons/Icons';
 import Footer from '../../components/Footer/Footer';
 import LoginAndRegisterHeader from '../../components/LoginAndRegisterHeader/LoginAndRegisterHeader';
+import openNotification from '../../components/Notification/Notification';
+
+const axios = require('axios');
 
 export default function Login() {
+  const requestUrl = '/login';
+  // const history = useHistory();
+
   const onFinish = (values) => {
-    // eslint-disable-next-line
-    console.log('Received values of form: ', values);
+    axios.post(requestUrl, values)
+      .then((response) => {
+        const resStatus = response.data.status;
+        const errorMessage = response.data.msg;
+
+        if (resStatus !== 200) {
+          openNotification('error', resStatus, errorMessage);
+          localStorage.setItem('isAuth', false);
+        }
+
+        if (resStatus === 200) {
+          localStorage.setItem('isAuth', true);
+          // history.push('/lib');
+          window.location.href = "/lib";
+        }
+      })
+      .catch((error) => {
+        if (error.response) {
+          // eslint-disable-next-line
+          console.log(error.response);
+          // ***********************************************************
+          // NOTE:
+          // (1) You may need modify the following 2 lines of code,
+          // due to different format error.response from the server...
+          // (2) After errorType & errorMessage != null or undefined,
+          // the notification will behave normally again...
+          // ***********************************************************
+          const errorType = error.response.data.status;
+          const errorMessage = error.response.data.error;
+          // Invoke Notification
+          openNotification('error', errorType, errorMessage);
+        }
+      });
   };
+
   return (
     <div
       className={classnames({
@@ -31,22 +69,6 @@ export default function Login() {
       <div className={loginStyle.annotation}>
         Online Assessment-Powerful Self-Examination System in AU
       </div>
-      <div className={loginStyle.loginSignUp}>
-        <Link
-          to="/login"
-          className={loginStyle.content}
-          style={{ textDecoration: 'none' }}
-        >
-          Login
-        </Link>
-        <Link
-          to="/register"
-          className={loginStyle.content}
-        // style={{ textDecoration: 'none' }}
-        >
-          Register
-        </Link>
-      </div>
       <div>
         <Form
           name="normal_login"
@@ -60,13 +82,18 @@ export default function Login() {
           onFinish={onFinish}
         >
           <Form.Item
-            className={loginStyle.email}
+            // className={loginStyle.email}
+            style={{marginBottom: '23px'}}
             name="email"
             rules={[
               {
                 required: true,
                 message: 'Please input your Email!',
               },
+              {
+                type: 'email',
+                message: 'Please input a valid Email address...'
+              }
             ]}
           >
             <Input
@@ -75,13 +102,14 @@ export default function Login() {
             />
           </Form.Item>
           <Form.Item
-            className={loginStyle.password}
+            // className={loginStyle.password}
+            style={{ marginBottom: '23px' }}
             name="password"
             rules={[
               {
                 required: true,
                 message: 'Please input your Password!',
-              },
+              }
             ]}
           >
             <Input
