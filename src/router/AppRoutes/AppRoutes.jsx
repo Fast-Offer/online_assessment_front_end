@@ -6,6 +6,7 @@ import Redo from '../../pages/Redo';
 import Fav from '../../pages/Fav';
 import Lib from '../../pages/Library';
 import Account from '../../pages/Account';
+import Error from '../../pages/Error/Error';
 
 const AppRoutes = () => (
   <Switch>
@@ -17,6 +18,9 @@ const AppRoutes = () => (
     </AuthenticatedRoutes>
     <AuthenticatedRoutes path="/fav">
       <Fav />
+    </AuthenticatedRoutes>
+    <AuthenticatedRoutes path='/error'>
+      <Error />
     </AuthenticatedRoutes>
     <AuthenticatedRoutes path="/account">
       <Account />
