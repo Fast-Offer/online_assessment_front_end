@@ -13,7 +13,7 @@ const { Header } = Layout;
 
 function MainHeader() {
   const history = useHistory();
-  
+
   return (
     <Header className="header">
       <Row>
@@ -32,7 +32,9 @@ function MainHeader() {
               localStorage.removeItem('isAuth');
               history.push('/login');
             }}
-          >Logout</Button>
+          >
+            Logout
+          </Button>
         </Col>
       </Row>
     </Header>
