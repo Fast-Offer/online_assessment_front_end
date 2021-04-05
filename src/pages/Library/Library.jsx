@@ -11,10 +11,7 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import SideNavigation from '../../components/SideNavigation/SideNavigation';
 
-
-
 class LibraryLayout extends React.Component {
-
   render() {
     return (
       <Layout>
@@ -22,7 +19,7 @@ class LibraryLayout extends React.Component {
         <Layout>
           <SideNavigation />
           <Layout>
-            <Breadcrumb style= {{ padding: '0 24px'}}>
+            <Breadcrumb style={{ padding: '0 24px' }}>
               <Breadcrumb.Item>Library</Breadcrumb.Item>
             </Breadcrumb>
             <SearchBarNav />

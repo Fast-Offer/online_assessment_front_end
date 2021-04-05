@@ -33,7 +33,7 @@ const Form = () => (
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
-        addNewUser(values)
+        addNewUser(values);
         setSubmitting(false);
       }}
     >
@@ -51,7 +51,7 @@ const Form = () => (
         <form onSubmit={handleSubmit}>
           <Input
             // className={styles.input}
-            style={{marginTop: '10px', marginBottom: '10px'}}
+            style={{ marginTop: '10px', marginBottom: '10px' }}
             type="email"
             name="email"
             placeholder="Email"
@@ -94,7 +94,7 @@ const Form = () => (
                 <Button
                   type="primary"
                   onClick={() => {
-                    submitForm()
+                    submitForm();
                   }}
                   disabled={isSubmitting}
                   style={{ width: '80%' }}
