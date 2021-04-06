@@ -14,7 +14,9 @@ function Cards() {
     <div className={contentStyle.card}>
       <Row gutter={8}>
         {data.map((card) => (
-          <Col className="gutter-row" span={6}>
+
+          <Col className="gutter-row" span={6} key={card.id}>
+
             <Card
               hoverable
               cover={(
@@ -22,7 +24,8 @@ function Cards() {
                   alt="example"
                   src={card.url}
                 />
-)}
+
+              )}
             >
               <Meta title={card.title} description={card.discription} />
             </Card>

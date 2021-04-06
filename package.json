@@ -31,8 +31,8 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "lint": "eslint ./src/components/** ./src/pages/** ./src/apis/** ./src/router/** ./src/libs -c .eslintrc.json --ext js,jsx",
-    "lint-fix": "eslint ./src/components/** ./src/pages/** ./src/apis/** ./src/router/** ./src/libs -c .eslintrc.json --fix --ext js,jsx"
+    "lint": "eslint ./src/components/** ./src/pages/** ./src/apis/** ./src/router/** ./src/libs ./src/context -c .eslintrc.json --ext js,jsx",
+    "lint-fix": "eslint ./src/components/** ./src/pages/** ./src/apis/** ./src/router/** ./src/libs ./src/context -c .eslintrc.json --fix --ext js,jsx"
   },
   "pre-commit": [
     "lint"
