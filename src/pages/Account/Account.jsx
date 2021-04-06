@@ -18,7 +18,7 @@ export default function Account() {
             <h5 style={{ margin: '10px 24px' }}>Account UI Page</h5>
             <p style={{ margin: '10px 24px' }}>this is the account page, please enter your personal data, and then save it</p>
           </div>
-          <div style={{ padding: '0 30px ', margin: '10px 0'}}>
+          <div style={{ padding: '0 30px ', margin: '10px 0' }}>
             <AccountDetails />
           </div>
         </Layout>

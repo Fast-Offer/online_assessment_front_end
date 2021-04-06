@@ -31,7 +31,7 @@ export default function Login() {
         if (resStatus === 200) {
           localStorage.setItem('isAuth', true);
           // history.push('/lib');
-          window.location.href = "/lib";
+          window.location.href = '/lib';
         }
       })
       .catch((error) => {
@@ -83,7 +83,7 @@ export default function Login() {
         >
           <Form.Item
             // className={loginStyle.email}
-            style={{marginBottom: '23px'}}
+            style={{ marginBottom: '23px' }}
             name="email"
             rules={[
               {
@@ -92,8 +92,8 @@ export default function Login() {
               },
               {
                 type: 'email',
-                message: 'Please input a valid Email address...'
-              }
+                message: 'Please input a valid Email address...',
+              },
             ]}
           >
             <Input
@@ -109,7 +109,7 @@ export default function Login() {
               {
                 required: true,
                 message: 'Please input your Password!',
-              }
+              },
             ]}
           >
             <Input

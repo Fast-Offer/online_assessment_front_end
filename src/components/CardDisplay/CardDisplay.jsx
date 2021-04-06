@@ -4,7 +4,7 @@ import 'antd/dist/antd.css';
 
 import contentStyle from './CardDisplay.module.less';
 
-import Cards from './Card'
+import Cards from './Card';
 
 class Content extends React.Component {
   render() {
@@ -15,7 +15,7 @@ class Content extends React.Component {
         </div>
       </div>
     );
-  };
+  }
 }
 
 export default Content;

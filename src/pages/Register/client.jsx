@@ -14,11 +14,11 @@ const addNewUser = (newUser) => {
       if (resStatus !== 200) {
         openNotification('error', resStatus, errorMessage);
       }
-      
+
       if (resStatus === 200) {
         openNotification('success', resStatus, successMessage);
         setTimeout(() => {
-          window.location.href = "/login";
+          window.location.href = '/login';
         }, 2000);
       }
     })
@@ -39,6 +39,6 @@ const addNewUser = (newUser) => {
         openNotification('error', errorType, errorMessage);
       }
     });
-}
+};
 
 export default addNewUser;
