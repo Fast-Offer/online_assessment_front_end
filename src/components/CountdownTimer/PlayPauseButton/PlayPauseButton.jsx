@@ -15,29 +15,4 @@ const PlayPauseButton = ({ onClick }) => {
     </div>
   );
 };
-
-// class PlayPauseButton extends React.Component{
-//     constructor(props){
-//         super(props);
-//         this.state = {
-//             isPaused: false
-//         }
-
-//     this.toggleButton = this.toggleButton.bind(this);
-//     }
-
-//     toggleButton = (prevState)=>{
-//         this.setState({
-//             isPaused: !prevState.isPaused
-//         })
-//     }
-
-//     render(){
-//         return(
-//
-//         )
-//     }
-
-// }
-
 export default PlayPauseButton;

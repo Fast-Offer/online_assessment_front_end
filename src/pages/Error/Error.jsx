@@ -1,25 +1,34 @@
 import React from 'react';
 import {
-  Layout, Breadcrumb, Form, Button, Input, Typography,
+  Layout, Breadcrumb, Form, Button, Input, Typography, Alert,
 } from 'antd';
 import MainHeader from '../../components/Header/Header';
 import SideNavigation from '../../components/SideNavigation/SideNavigation';
 import CountdownTimer from '../../components/CountdownTimer';
+import Footer from '../../components/Footer';
 
 const Error = () => {
   const { Title } = Typography;
   const { Content, Header } = Layout;
+
+  const LAYOUT_STYLE = {
+    display: 'flex',
+    flexFlow: 'column nowrap',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
   const HEADER_AREA = {
     width: 1050,
     height: 120,
-    margin: '10px 16px',
+    margin: '20px 16px',
     padding: 24,
     backgroundColor: 'white',
   };
   const CONTENT_AREA = {
     display: 'flex',
-    flexFlow: 'row wrap',
+    flexFlow: 'column nowrap',
     justifyContent: 'center',
+    alignItems: 'center',
     width: 1050,
     height: 720,
     margin: '10px 16px',
@@ -31,6 +40,7 @@ const Error = () => {
   const INPUT_FIELD = {
     width: 795,
     height: 330,
+    maxWidth: 1024,
     display: 'block',
     margin: '0px auto',
     marginTop: '20px',
@@ -38,22 +48,27 @@ const Error = () => {
     border: '.15rem solid lightgrey',
     resize: 'both',
   };
+  const INFO_STYLE = {
+    margin: '20px 0px',
+    width: 795,
+    height: 120,
+  };
   const BUTTON_STYLE = {
     display: 'block',
-    margin: '10px auto 10px',
-    border: '1px solid red',
+    margin: '0px auto',
     borderRadius: 5,
-  };
-  const H2_TITLE = {
-    align: 'center',
+    color: 'white',
+    backgroundColor: '#FF7C9E',
+    fontWeight: 'bold',
   };
 
+  const InfoDescription = '这里头应该写啥？？';
   return (
     <Layout>
       <MainHeader />
       <Layout>
         <SideNavigation />
-        <Layout>
+        <Layout style={LAYOUT_STYLE}>
           <Header
             style={HEADER_AREA}
             breakpoint="lg"
@@ -69,20 +84,28 @@ const Error = () => {
           </Header>
 
           <Content style={CONTENT_AREA}>
-            <Title level={2} style={H2_TITLE}>
+            <Title level={2}>
               Please describe as much details about the error as possible
             </Title>
             <Form name="Error Submission" initialValues={{ remember: false }}>
               <Form.Item>
                 <Input.TextArea style={INPUT_FIELD} />
-                <Button type="button" style={BUTTON_STYLE}>Button text here, DO NOT click</Button>
+                <Alert
+                  message="Info Text"
+                  description={InfoDescription}
+                  type="info"
+                  style={INFO_STYLE}
+                />
               </Form.Item>
             </Form>
-            <CountdownTimer hour={1} min={3} sec={3} />
+            <Button type="button" style={BUTTON_STYLE}>Click to submit</Button>
           </Content>
+          <CountdownTimer style={{ display: 'inline' }} hour={1} min={1} sec={1} />
         </Layout>
       </Layout>
+      <Footer />
     </Layout>
+
   );
 };
 
