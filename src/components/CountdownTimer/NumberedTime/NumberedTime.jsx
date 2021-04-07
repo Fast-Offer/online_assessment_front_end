@@ -6,6 +6,7 @@ const NumberedTime = ({
   const [hour, setHour] = React.useState(hourProp);
   const [minute, setMinute] = React.useState(minProp);
   const [second, setSecond] = React.useState(secProp);
+
   const func = (h, m, s) => {
     if (m >= 0 && m < 60 && s >= 0 && s < 60) {
       if (s > 0) {
@@ -34,11 +35,15 @@ const NumberedTime = ({
       const timerId = setInterval(() => {
         if (activeStatus) {
           func(hour, minute, second);
+        } else {
+          setSecond(second + 1);
+          clearInterval(timerId);
         }
       }, 1000);
       return () => clearInterval(timerId);
     }, [hour, minute, second],
   );
+
   let displayedTime;
   if (hour >= 0 && hour < 10) {
     displayedTime = (

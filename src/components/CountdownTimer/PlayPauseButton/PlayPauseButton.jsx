@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-const PlayPauseButton = ({ onClick }) => {
+const PlayPauseButton = ({ clickToSwitch }) => {
   const [isPaused, setIsPaused] = useState(false);
 
   const toggleButton = () => {
-    onClick();
+    clickToSwitch();
     setIsPaused(!isPaused);
   };
 
