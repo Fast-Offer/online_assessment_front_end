@@ -10,8 +10,12 @@ const PlayPauseButton = ({ clickToSwitch }) => {
 
   return (
     <div>
-      {isPaused && <button onClick={toggleButton} type="button">Play</button>}
-      {!isPaused && <button onClick={toggleButton} type="button">Pause</button>}
+      {isPaused && <button onClick={toggleButton} type="button" style={{ backgroundColor: 'green' }}>Play Button</button>}
+      {!isPaused && <button onClick={toggleButton} type="button" style={{ backgroundColor: 'pink' }}>Pause Button</button>}
+      <span>
+        {'-PlayPauseButton-// isPaused state is : '}
+        {isPaused ? 'true' : 'false'}
+      </span>
     </div>
   );
 };

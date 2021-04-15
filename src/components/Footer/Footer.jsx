@@ -9,9 +9,9 @@ const Footer = () => (
       <Col span={8}> </Col>
       <Col span={8}>
         <p>
-          Copyright
+          {'Copyright '}
           {new Date().getFullYear()}
-          Fast Offer Team
+          {' | Fast Offer Team'}
         </p>
       </Col>
       <Col span={8} style={{ textAlign: 'right' }}>

@@ -10,7 +10,11 @@ const CountdownTimer = ({ hour, min, sec }) => {
   return (
     <div>
       <PlayPauseButton clickToSwitch={toggleActive} />
-      <NumberedTime hourProp={hour} minProp={min} secProp={sec} activeStatus={isActive} />
+      <NumberedTime hourProp={hour} minProp={min} secProp={sec} changePausePlay={toggleActive} />
+      <span>
+        {'-CountdownTimer-// isActive state is : '}
+        {isActive ? 'true' : 'false'}
+      </span>
     </div>
   );
 };

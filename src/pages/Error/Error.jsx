@@ -4,44 +4,34 @@ import {
 } from 'antd';
 import MainHeader from '../../components/Header/Header';
 import SideNavigation from '../../components/SideNavigation/SideNavigation';
-import CountdownTimer from '../../components/CountdownTimer';
 import Footer from '../../components/Footer';
 
 const Error = () => {
   const { Title } = Typography;
   const { Content, Header } = Layout;
 
-  const LAYOUT_STYLE = {
-    display: 'flex',
-    flexFlow: 'column nowrap',
-    alignItems: 'center',
-    justifyContent: 'center',
-  };
   const HEADER_AREA = {
-    width: 1050,
+    display: 'block',
+    margin: '20px 16px 10px 16px',
+    paddingTop: 23,
+    paddingLeft: 115,
+    minWidth: 480,
     height: 120,
-    margin: '20px 16px',
-    padding: 24,
     backgroundColor: 'white',
   };
   const CONTENT_AREA = {
-    display: 'flex',
-    flexFlow: 'column nowrap',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 1050,
-    height: 720,
     margin: '10px 16px',
     marginBottom: '16px',
-    padding: '24px 24px',
+    paddingLeft: 115,
+    padding: '24px 115px',
+    height: 700,
     minHeight: 280,
+    minWidth: 480,
     backgroundColor: 'white',
   };
   const INPUT_FIELD = {
-    width: 795,
+    width: '100%',
     height: 330,
-    maxWidth: 1024,
-    display: 'block',
     margin: '0px auto',
     marginTop: '20px',
     padding: '2px',
@@ -50,7 +40,7 @@ const Error = () => {
   };
   const INFO_STYLE = {
     margin: '20px 0px',
-    width: 795,
+    width: '100%',
     height: 120,
   };
   const BUTTON_STYLE = {
@@ -58,7 +48,7 @@ const Error = () => {
     margin: '0px auto',
     borderRadius: 5,
     color: 'white',
-    backgroundColor: '#FF7C9E',
+    backgroundColor: '#ff6666',
     fontWeight: 'bold',
   };
 
@@ -68,7 +58,7 @@ const Error = () => {
       <MainHeader />
       <Layout>
         <SideNavigation />
-        <Layout style={LAYOUT_STYLE}>
+        <Layout>
           <Header
             style={HEADER_AREA}
             breakpoint="lg"
@@ -100,7 +90,6 @@ const Error = () => {
             </Form>
             <Button type="button" style={BUTTON_STYLE}>Click to submit</Button>
           </Content>
-          <CountdownTimer style={{ display: 'inline' }} hour={1} min={1} sec={1} />
         </Layout>
       </Layout>
       <Footer />
