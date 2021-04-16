@@ -4,7 +4,6 @@ import {
 } from 'antd';
 import MainHeader from '../../components/Header/Header';
 import SideNavigation from '../../components/SideNavigation/SideNavigation';
-import Footer from '../../components/Footer';
 
 const Error = () => {
   const { Title } = Typography;
@@ -52,7 +51,7 @@ const Error = () => {
     fontWeight: 'bold',
   };
 
-  const InfoDescription = '这里头应该写啥？？';
+  const InfoDescription = '这里头应该展示啥？？';
   return (
     <Layout>
       <MainHeader />
@@ -92,7 +91,6 @@ const Error = () => {
           </Content>
         </Layout>
       </Layout>
-      <Footer />
     </Layout>
 
   );
