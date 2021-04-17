@@ -4,7 +4,6 @@ import {
 } from 'antd';
 import MainHeader from '../../components/Header/Header';
 import SideNavigation from '../../components/SideNavigation/SideNavigation';
-import Footer from '../../components/Footer';
 
 const Error = () => {
   const { Title } = Typography;
@@ -92,7 +91,6 @@ const Error = () => {
           </Content>
         </Layout>
       </Layout>
-      <Footer />
     </Layout>
 
   );
