@@ -8,7 +8,11 @@ const Footer = () => (
     <Row>
       <Col span={8}> </Col>
       <Col span={8}>
-        <p>Copyright ©2021 Fast Offer Team</p>
+        <p>
+          {'Copyright '}
+          {new Date().getFullYear()}
+          {' | Fast Offer Team'}
+        </p>
       </Col>
       <Col span={8} style={{ textAlign: 'right' }}>
         <QuestionCircleOutlined className={styles.questionMark} />
