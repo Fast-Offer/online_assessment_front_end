@@ -30,6 +30,7 @@ function MainHeader() {
             onClick={() => {
               localStorage.setItem('isAuth', false);
               localStorage.removeItem('isAuth');
+              localStorage.removeItem('userId');
               history.push('/login');
             }}
           >

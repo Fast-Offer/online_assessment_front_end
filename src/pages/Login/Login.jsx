@@ -28,6 +28,7 @@ export default function Login() {
           localStorage.setItem('isAuth', false);
         } else {
           localStorage.setItem('isAuth', true);
+          localStorage.setItem('userId', response.data.accountId);
           // history.push('/lib');
           window.location.href = '/lib';
         }
