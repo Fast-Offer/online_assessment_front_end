@@ -20,15 +20,13 @@ export default function Login() {
   const onFinish = (values) => {
     axios.post(requestUrl, values)
       .then((response) => {
-        const resStatus = response.data.status;
-        const errorMessage = response.data.msg;
+        const resStatus = response.data.errorCode;
+        const errorMessage = response.data.message;
 
-        if (resStatus !== 200) {
+        if (response.data.errorCode) {
           openNotification('error', resStatus, errorMessage);
           localStorage.setItem('isAuth', false);
-        }
-
-        if (resStatus === 200) {
+        } else {
           localStorage.setItem('isAuth', true);
           // history.push('/lib');
           window.location.href = '/lib';
