@@ -3,6 +3,7 @@ import {
   Form, Input, InputNumber, Button,
 } from 'antd';
 import AccountDetailsStyled from './AccountDetails.module.less';
+import updataProfile from './client';
 
 const layout = {
   labelCol: { span: 7 },
@@ -24,8 +25,10 @@ const validateMessages = {
 
 const AccountDetails = () => {
   const onFinish = (values) => {
-    // eslint-disable-next-line
-    console.log(values);
+    const newValues = values.user;
+    // Re-assemble the request body... (Add accountId)
+    newValues.accountId = localStorage.userId;
+    updataProfile(newValues);
   };
 
   return (
