@@ -7,16 +7,10 @@ const requestUrl = '/signup';
 const addNewUser = (newUser) => {
   axios.post(requestUrl, newUser)
     .then((response) => {
-      const resStatus = response.data.status;
-      const errorMessage = response.data.msg;
-      const successMessage = 'Register successfully! Page will jump to login automatically...';
-
-      if (resStatus !== 200) {
-        openNotification('error', resStatus, errorMessage);
-      }
-
-      if (resStatus === 200) {
-        openNotification('success', resStatus, successMessage);
+      if (response.data.errorCode) {
+        openNotification('error', response.data.errorCode, response.data.message);
+      } else {
+        openNotification('success', 'Sign up Successfully', 'Page will jump to Login automatically...');
         setTimeout(() => {
           window.location.href = '/login';
         }, 2000);
