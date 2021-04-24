@@ -5,17 +5,17 @@ import SideNavigation from '../../components/SideNavigation';
 import CustomPageHeader from '../../components/CustomPageHeader';
 import CustomPageBody from '../../components/CustomPageBody';
 
-const Error = () => (
+const PracticeMode = () => (
   <Layout>
     <MainHeader />
     <Layout>
       <SideNavigation />
       <Layout>
-        <CustomPageHeader page="Error" />
-        <CustomPageBody page="Error" />
+        <CustomPageHeader h={1} m={11} s={11} page="Practice" />
+        <CustomPageBody page="Practice" />
       </Layout>
     </Layout>
   </Layout>
 );
 
-export default Error;
+export default PracticeMode;
