@@ -1,7 +1,8 @@
 import React from 'react';
 import {
-  Layout, Form, Input, Typography, Alert, Button, Radio,
+  Layout, Form, Input, Typography, Alert, Button, Radio, Space, Pagination,
 } from 'antd';
+import { StarTwoTone, QuestionCircleTwoTone } from '@ant-design/icons';
 
 const CONTENT_AREA = {
   margin: '10px 16px',
@@ -75,24 +76,42 @@ const CustomPageBody = ({ page }) => {
       <Title style={{ textAlign: 'center' }} level={2}>
         {QUESTION_TITLE}
       </Title>
-      <Radio.Group style={{ display: 'block', width: '500px', margin: '0 auto' }}>
-        <Radio style={radioStyle} value={1}>
-          Option Answer A
-        </Radio>
-        <Radio style={radioStyle} value={2}>
-          Option Answer B
-        </Radio>
-        <Radio style={radioStyle} value={3}>
-          Option Answer C
-        </Radio>
-        <Radio style={radioStyle} value={4}>
-          Option Answer D
-        </Radio>
-      </Radio.Group>
-      <div>
-        <Button type="button">Check</Button>
-        <Button type="button">Finish</Button>
+      <Space size={45} width="100%" style={{ textAlign: 'center' }}>
+        <Radio.Group style={{
+          display: 'block', width: '500px', minHeight: '400px', margin: '0 auto',
+        }}
+        >
+          <Radio style={radioStyle} value={1}>
+            Option Answer A
+          </Radio>
+          <Radio style={radioStyle} value={2}>
+            Option Answer B
+          </Radio>
+          <Radio style={radioStyle} value={3}>
+            Option Answer C
+          </Radio>
+          <Radio style={radioStyle} value={4}>
+            Option Answer D
+          </Radio>
+        </Radio.Group>
+      </Space>
+      <div style={{ display: 'flex', justifyContent: 'space-between', padding: '40px' }}>
+        <Space size={25} align="center">
+          <span>
+            <StarTwoTone />
+            favorite
+          </span>
+          <span>
+            <QuestionCircleTwoTone />
+            report error
+          </span>
+        </Space>
+        <Space size={25} align="center">
+          <Button type="button">Check</Button>
+          <Button type="button">Finish</Button>
+        </Space>
       </div>
+      <Pagination style={{ textAlign: 'center' }} defaultCurrent={1} total={32} />
     </div>
   );
 
