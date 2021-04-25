@@ -73,12 +73,12 @@ const CustomPageBody = ({ page }) => {
 
   const PRACTICE_THEME = (
     <div>
-      <Title style={{ textAlign: 'center' }} level={2}>
+      <Title style={{ textAlign: 'center', paddingTop: '50px' }} level={2}>
         {QUESTION_TITLE}
       </Title>
       <Space size={45} width="100%" style={{ textAlign: 'center' }}>
         <Radio.Group style={{
-          display: 'block', width: '500px', minHeight: '400px', margin: '0 auto',
+          display: 'block', width: '500px', minHeight: '400px', margin: '0 auto', paddingTop: '30px',
         }}
         >
           <Radio style={radioStyle} value={1}>
