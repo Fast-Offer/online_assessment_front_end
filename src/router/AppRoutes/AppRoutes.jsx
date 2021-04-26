@@ -7,6 +7,7 @@ import Fav from '../../pages/Fav';
 import Lib from '../../pages/Library';
 import Account from '../../pages/Account';
 import Error from '../../pages/Error/Error';
+import Result from '../../pages/Result/Result';
 
 const AppRoutes = () => (
   <Switch>
@@ -24,6 +25,9 @@ const AppRoutes = () => (
     </AuthenticatedRoutes>
     <AuthenticatedRoutes path="/account">
       <Account />
+    </AuthenticatedRoutes>
+    <AuthenticatedRoutes path="/result">
+      <Result />
     </AuthenticatedRoutes>
     <UnauthenticatedRoutes />
   </Switch>
