@@ -25,6 +25,9 @@ const AppRoutes = () => (
     <AuthenticatedRoutes path="/account">
       <Account />
     </AuthenticatedRoutes>
+    <AuthenticatedRoutes path="/mock">
+      <Mock />
+    </AuthenticatedRoutes>
     <UnauthenticatedRoutes />
   </Switch>
 );
