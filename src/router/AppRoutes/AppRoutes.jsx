@@ -8,6 +8,7 @@ import Lib from '../../pages/Library';
 import Account from '../../pages/Account';
 import Error from '../../pages/Error/Error';
 import Mock from '../../pages/Mock/Mock';
+import Result from '../../pages/Result/Result';
 
 const AppRoutes = () => (
   <Switch>
@@ -25,6 +26,9 @@ const AppRoutes = () => (
     </AuthenticatedRoutes>
     <AuthenticatedRoutes path="/account">
       <Account />
+    </AuthenticatedRoutes>
+    <AuthenticatedRoutes path="/result">
+      <Result />
     </AuthenticatedRoutes>
     <AuthenticatedRoutes path="/mock">
       <Mock />
