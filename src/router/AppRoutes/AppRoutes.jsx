@@ -7,6 +7,7 @@ import Fav from '../../pages/Fav';
 import Lib from '../../pages/Library';
 import Account from '../../pages/Account';
 import Error from '../../pages/Error/Error';
+import PracticeMode from '../../pages/PracticeMode';
 import Mock from '../../pages/Mock/Mock';
 import Result from '../../pages/Result/Result';
 
@@ -23,6 +24,9 @@ const AppRoutes = () => (
     </AuthenticatedRoutes>
     <AuthenticatedRoutes path="/error">
       <Error />
+    </AuthenticatedRoutes>
+    <AuthenticatedRoutes path="/practice">
+      <PracticeMode />
     </AuthenticatedRoutes>
     <AuthenticatedRoutes path="/account">
       <Account />
