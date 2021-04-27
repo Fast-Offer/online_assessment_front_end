@@ -39,7 +39,7 @@ const RedoAndFavTable = () => (
               console.log(record.quizId);
               }}
             >
-              Edit
+              View
             </Button>
             <Button
               type="link"
