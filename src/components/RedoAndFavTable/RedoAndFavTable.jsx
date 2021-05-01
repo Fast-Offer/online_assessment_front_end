@@ -13,6 +13,7 @@ const RedoAndFavTable = () => {
   const [dataState, setDataState] = useState();
   const [modalVisibility, setModalVisibility] = useState(false);
   const [currentViewedQuizId, setCurrentViewedQuizId] = useState(null);
+
   const toggleModalVisibility = () => {
     setModalVisibility(!modalVisibility);
   };
@@ -23,7 +24,7 @@ const RedoAndFavTable = () => {
       })
         .then((response) => {
           setDataState(response.data);
-          console.log(response);
+          console.log(response.data);
         })
         .catch((error) => {
           if (error.response) {
@@ -43,13 +44,14 @@ const RedoAndFavTable = () => {
         minHeight: 280,
       }}
     >
-      <Table dataSource={dataState}>
+      <Table dataSource={dataState} rowKey={(record) => record.questionId}>
         <Column title="Quiz ID" dataIndex="questionId" key="quizId" />
         <Column title="Quiz Title" dataIndex="title" key="quizTitle" />
         <Column title="Category" dataIndex="category" key="category" />
         <Column
           title="Action"
           key="action"
+          align="center"
           // Renderer of the table cell. function(text, record, index) {}
           render={(record) => (
             <Space size="small">
@@ -60,12 +62,14 @@ const RedoAndFavTable = () => {
                   // NOTE: You need modify code in this block
                   // ***********************************************************
                   // eslint-disable-next-line
-                setCurrentViewedQuizId(record.quizId);
+                  setCurrentViewedQuizId(record.questionId);
                   toggleModalVisibility();
-                  console.log(currentViewedQuizId);
                 }}
               >
-                View
+                <span>
+                  View
+                  {record.quizId}
+                </span>
               </Button>
               <Button
                 type="link"
@@ -76,7 +80,8 @@ const RedoAndFavTable = () => {
                   // ***********************************************************
                   // Modal will show up and the quizId will be transferred to
                   // [ showDeleteConfirm component ]
-                  showDeleteConfirm(record.data.quizId);
+                  setCurrentViewedQuizId(record.questionId);
+                  showDeleteConfirm(record.questionId);
                 }}
               >
                 Delete
@@ -88,9 +93,9 @@ const RedoAndFavTable = () => {
       <Modal title="my info modal" visible={modalVisibility} onOk={toggleModalVisibility} onCancel={toggleModalVisibility}>
         <p>
           The quiz id is :
-          {
-          currentViewedQuizId
-          }
+          {` [ 
+          ${currentViewedQuizId}
+           ]`}
         </p>
       </Modal>
     </Content>
