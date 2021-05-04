@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import {
   Layout, Table, Space, Button, Modal,
 } from 'antd';
+import { ExclamationCircleOutlined } from '@ant-design/icons';
 import axios from 'axios';
 // import data from './fakeData';
-import showDeleteConfirm from '../showDeleteConfirm/showDeleteConfirm';
 
 const { Content } = Layout;
 const { Column } = Table;
@@ -13,10 +13,60 @@ const RedoAndFavTable = () => {
   const [dataState, setDataState] = useState();
   const [modalVisibility, setModalVisibility] = useState(false);
   const [currentViewedQuizId, setCurrentViewedQuizId] = useState(null);
+  const [isFetching, setIsFetching] = useState(true);
+  const { confirm } = Modal;
+
+  const showDeleteConfirm = (quizId) => {
+    const deleteOneRecord = () => {
+      const acquireData = async () => {
+        await axios.post('/deleteRedoQuestions', {
+          questionId: quizId,
+          intervieweeID: localStorage.userId,
+        })
+          .then((response) => {
+            setIsFetching(false);
+            setDataState(response.data);
+          })
+          .catch((error) => {
+            if (error.response) {
+              console.log(error.response);
+            }
+          });
+      };
+      acquireData();
+    };
+
+    confirm({
+      title: 'Are you sure delete this task?',
+      icon: <ExclamationCircleOutlined />,
+      content: `Record :             
+      [ ${quizId} ] 
+      will be deleted after you click on Yes...`,
+      okText: 'Yes',
+      okType: 'danger',
+      cancelText: 'No',
+      onOk() {
+        // ***********************************************************
+        // NOTE: You need modify code in this block
+        // ***********************************************************
+        // eslint-disable-next-line
+        deleteOneRecord();
+        console.log('OK has been clicked...');
+      },
+      onCancel() {
+        // ***********************************************************
+        // NOTE: You need modify code in this block
+        // ***********************************************************
+        // eslint-disable-next-line
+          console.log('No has been clicked...');
+      },
+    });
+  };
 
   const toggleModalVisibility = () => {
     setModalVisibility(!modalVisibility);
   };
+
   useEffect(() => {
     const acquireData = async () => {
       await axios.post('/redo', {
@@ -33,7 +83,7 @@ const RedoAndFavTable = () => {
         });
     };
     acquireData();
-  }, []);
+  }, [isFetching]);
 
   return (
     <Content
