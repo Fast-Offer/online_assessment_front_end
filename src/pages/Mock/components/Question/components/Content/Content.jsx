@@ -15,6 +15,7 @@ const Content = ({
     );
   };
   const handleSubmit = () => {
+    // eslint-disable-next-line
     console.log(answers);
   };
 
