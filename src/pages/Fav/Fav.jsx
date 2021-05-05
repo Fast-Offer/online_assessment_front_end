@@ -17,7 +17,7 @@ const Fav = () => (
         </Breadcrumb>
         <h5>The Darkest before Dawn...</h5>
         <SearchBar />
-        <RedoAndFavTable />
+        <RedoAndFavTable tableType="favquestions" />
       </Layout>
     </Layout>
   </Layout>

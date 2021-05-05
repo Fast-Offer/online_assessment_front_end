@@ -4,17 +4,18 @@ import {
 } from 'antd';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 import axios from 'axios';
-// import data from './fakeData';
 
 const { Content } = Layout;
 const { Column } = Table;
 
-const RedoAndFavTable = () => {
+const RedoAndFavTable = (props) => {
   const [dataState, setDataState] = useState();
   const [modalVisibility, setModalVisibility] = useState(false);
   const [currentViewedQuizId, setCurrentViewedQuizId] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   const { confirm } = Modal;
+  // eslint-disable-next-line react/destructuring-assignment
+  const requestUrl = props.tableType;
 
   const showDeleteConfirm = (quizId) => {
     const deleteOneRecord = () => {
@@ -65,7 +66,7 @@ const RedoAndFavTable = () => {
 
   useEffect(() => {
     const acquireData = async () => {
-      await axios.post('/redo', {
+      await axios.post(`/${requestUrl}`, {
         id: localStorage.userId,
       })
         .then((response) => {

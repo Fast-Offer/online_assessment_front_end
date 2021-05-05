@@ -17,7 +17,7 @@ const Redo = () => (
         </Breadcrumb>
         <h5>No Pain No Gain...</h5>
         <SearchBar />
-        <RedoAndFavTable />
+        <RedoAndFavTable tableType="redo" />
       </Layout>
     </Layout>
   </Layout>
