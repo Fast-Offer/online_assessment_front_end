@@ -24,8 +24,8 @@ const RedoAndFavTable = () => {
           intervieweeID: localStorage.userId,
         })
           .then((response) => {
-            setIsFetching(false);
-            setDataState(response.data);
+            setIsFetching(true);
+            console.log(response.data);
           })
           .catch((error) => {
             if (error.response) {
@@ -74,6 +74,7 @@ const RedoAndFavTable = () => {
       })
         .then((response) => {
           setDataState(response.data);
+          setIsFetching(false);
           console.log(response.data);
         })
         .catch((error) => {
