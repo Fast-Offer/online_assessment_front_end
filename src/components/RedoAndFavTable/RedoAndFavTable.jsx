@@ -25,10 +25,12 @@ const RedoAndFavTable = () => {
         })
           .then((response) => {
             setIsFetching(true);
+            // eslint-disable-next-line
             console.log(response.data);
           })
           .catch((error) => {
             if (error.response) {
+              // eslint-disable-next-line
               console.log(error.response);
             }
           });
@@ -46,17 +48,11 @@ const RedoAndFavTable = () => {
       okType: 'danger',
       cancelText: 'No',
       onOk() {
-        // ***********************************************************
-        // NOTE: You need modify code in this block
-        // ***********************************************************
-        // eslint-disable-next-line
         deleteOneRecord();
+        // eslint-disable-next-line
         console.log('OK has been clicked...');
       },
       onCancel() {
-        // ***********************************************************
-        // NOTE: You need modify code in this block
-        // ***********************************************************
         // eslint-disable-next-line
           console.log('No has been clicked...');
       },
@@ -75,10 +71,12 @@ const RedoAndFavTable = () => {
         .then((response) => {
           setDataState(response.data);
           setIsFetching(false);
+          // eslint-disable-next-line
           console.log(response.data);
         })
         .catch((error) => {
           if (error.response) {
+            // eslint-disable-next-line
             console.log(error.response);
           }
         });
@@ -126,9 +124,6 @@ const RedoAndFavTable = () => {
                 type="link"
                 danger
                 onClick={() => {
-                  // ***********************************************************
-                  // NOTE: You need add code in this block
-                  // ***********************************************************
                   // Modal will show up and the quizId will be transferred to
                   // [ showDeleteConfirm component ]
                   setCurrentViewedQuizId(record.questionId);
