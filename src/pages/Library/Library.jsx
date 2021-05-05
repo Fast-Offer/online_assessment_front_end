@@ -8,7 +8,6 @@ import SearchBarNav from '../../components/SearchBarNav/SearchBarNav';
 import CardsDisplay from '../../components/CardDisplay/CardDisplay';
 import NavigationBar from '../../components/NavigationBar/NavigationBar';
 import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
 import SideNavigation from '../../components/SideNavigation/SideNavigation';
 
 class LibraryLayout extends React.Component {
@@ -27,7 +26,6 @@ class LibraryLayout extends React.Component {
             <CardsDisplay />
           </Layout>
         </Layout>
-        <Footer />
       </Layout>
     );
   }
